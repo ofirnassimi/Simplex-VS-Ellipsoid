@@ -60,3 +60,7 @@ class SimplexPage(Page):
             res = linprog(c=Config.objective, A_ub=Config.constraints_A, b_ub=Config.constraints_b,
                           bounds=Config.bounds, method='simplex')
             st.write(res)
+
+            res = linprog(c=Config.objective, A_ub=Config.constraints_A, b_ub=Config.constraints_b,
+                          bounds=Config.bounds, method='interior-point')
+            st.write(res)

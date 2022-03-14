@@ -12,7 +12,6 @@ if __name__ == '__main__':
     st.sidebar.title("Details")
     st.sidebar.info("Author: Ofir Nassimi")
     st.sidebar.info("This project compares between different optimization methods")
-    st.sidebar.info("[Report](add url)")
     st.sidebar.info("[Github](https://github.com/ofirnassimi/Simplex-VS-Ellipsoid.git)")
 
     introduction = IntroductionPage()

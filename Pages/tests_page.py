@@ -77,7 +77,7 @@ class TestsPage(Page):
 
         # First, generate linear problems
         for i in range(NUM_PROBLEMS):
-            dim = np.random.randint(1, 21)
+            dim = np.random.randint(1, 16)
             constraints_number = np.random.randint(1, dim + 1)
             generate_linear_problem(dim, constraints_number)
             all_linear_problems.append([Config.objective, Config.constraints_A, Config.constraints_b, Config.bounds])
@@ -88,7 +88,7 @@ class TestsPage(Page):
             for problem in all_linear_problems:
                 i += 1
                 res = linprog(c=problem[0], A_ub=problem[1], b_ub=problem[2], method='simplex')
-                """if (i % 100 == 0):
+                """if (i == 1):
                     st.write(problem)
                     st.write(res)"""
                 iterations = res['nit']
@@ -106,7 +106,7 @@ class TestsPage(Page):
             for problem in all_linear_problems:
                 i += 1
                 res = linprog(c=problem[0], A_ub=problem[1], b_ub=problem[2], method='interior-point')
-                """if (i % 100 == 0):
+                """if (i == 1):
                     st.write(problem)
                     st.write(res)"""
                 iterations = res['nit']
