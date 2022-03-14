@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from Pages.page import Page
@@ -170,7 +169,7 @@ class TestsPage(Page):
             plt.plot(nums2, km_simplex_iters, '.-')
             plt.plot(nums2, km_ellipsoid_iters, '.-')
             plt.legend(['Simplex Method', 'Ellipsoid Method'])
-            plt.xlabel("Test")
+            plt.xlabel("Cube Dimension")
             plt.ylabel("Total Iterations")
             plt.title("Total iterations of Klee-Minty Cubes in Both Methods")
             st.pyplot(fig)

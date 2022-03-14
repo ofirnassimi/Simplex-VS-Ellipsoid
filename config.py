@@ -1,6 +1,3 @@
-import os
-import pandas as pd
-
 class Config:
     # Read the optimization method
     METHOD_1 = "Simplex"

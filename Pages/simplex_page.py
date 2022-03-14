@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import numpy as np
 from Pages.page import Page
 from config import Config
